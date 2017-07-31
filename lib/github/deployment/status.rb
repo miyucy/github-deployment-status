@@ -17,7 +17,7 @@ module Github
                                                  environment: @environment,
                                                  auto_merge: false)
           octokit.create_deployment_status(deployment[:url],
-                                           state: 'success',
+                                           'success',
                                            target_url: @target_url,
                                            description: @description)
         end
