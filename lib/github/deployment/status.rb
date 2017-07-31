@@ -28,22 +28,22 @@ module Github
 
         def parse_options(argv)
           OptionParser.new do |opt|
-            opt.on('-a', '--access-token', String) do |v|
+            opt.on('-a', '--access-token V', String) do |v|
               @access_token = v
             end
-            opt.on('-r', '--repo', String) do |v|
+            opt.on('-r', '--repo V', String) do |v|
               @repo = v
             end
-            opt.on('--ref', String) do |v|
+            opt.on('--ref V', String) do |v|
               @ref = v
             end
-            opt.on('--environment', String) do |v|
+            opt.on('--environment V', String) do |v|
               @environment = v
             end
-            opt.on('--description', String) do |v|
+            opt.on('--description V', String) do |v|
               @description = v
             end
-            opt.on('--target-url', String) do |v|
+            opt.on('--target-url V', String) do |v|
               @target_url = v
             end
 
