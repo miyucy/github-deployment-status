@@ -15,7 +15,8 @@ module Github
           parse_options @argv
           deployment = octokit.create_deployment(@repo, @ref,
                                                  environment: @environment,
-                                                 auto_merge: false)
+                                                 auto_merge: false,
+                                                 required_contexts: ["notifications.ghds"])
           octokit.create_deployment_status(deployment[:url],
                                            'success',
                                            target_url: @target_url,
