@@ -16,7 +16,7 @@ module Github
           deployment = octokit.create_deployment(@repo, @ref,
                                                  environment: @environment,
                                                  auto_merge: false,
-                                                 required_contexts: ["notifications.ghds"])
+                                                 required_contexts: [])
           octokit.create_deployment_status(deployment[:url],
                                            'success',
                                            target_url: @target_url,
